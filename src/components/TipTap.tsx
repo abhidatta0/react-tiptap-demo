@@ -1,8 +1,10 @@
 import {useEditor, EditorContent} from '@tiptap/react';
 import StarterKit from '@tiptap/starter-kit';
+import Underline from '@tiptap/extension-underline'
 
 const extensions = [
     StarterKit,
+    Underline,
 ]
 
 const content = ``;
@@ -44,6 +46,12 @@ const TipTap = ()=>{
                 className={editor.isActive('strike') ? 'is-active' : ''}
             >
                 <s>S</s>
+            </button>
+            <button
+                onClick={() => editor.chain().focus().toggleUnderline().run()}
+                className={editor.isActive('underline') ? 'is-active' : ''}
+            >
+                <u>U</u>
             </button>
             <button
                 onClick={() => editor.chain().focus().toggleCode().run()}
