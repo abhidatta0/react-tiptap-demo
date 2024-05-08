@@ -1,10 +1,11 @@
 import './App.css'
+import NewPost from './components/NewPost'
 
 function App() {
 
   return (
     <>
-      Hello Tiptap
+      <NewPost />
     </>
   )
 }
