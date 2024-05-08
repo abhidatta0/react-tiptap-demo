@@ -8,12 +8,22 @@ const extensions = [
 ]
 
 const content = ``;
-const TipTap = ()=>{
+
+type Props = {
+    handleHtmlSave:(html:string)=> void;
+}
+const TipTap = ({handleHtmlSave}:Props)=>{
     const editor = useEditor({
         extensions,
         content
     });
     if(!editor) return null;
+
+    const handleEditorContent = ()=>{
+      const html = editor.getHTML();
+      handleHtmlSave(html);
+    }
+
     return (
       <div>
         <div>
@@ -162,7 +172,7 @@ const TipTap = ()=>{
             <EditorContent editor={editor}/>
         </div>
 
-        <button>Save</button>
+        <button onClick={handleEditorContent}>Save</button>
       </div>
     )
   }
