@@ -1,0 +1,15 @@
+/* need to override them here  as tailwind has overridden before in index.css*/
+.tiptap{
+    h1{
+        font-size: 2.5rem;
+        font-weight: bold
+    }
+
+    h2{
+        font-size: 2rem;
+        font-weight: bold
+    }
+
+
+    /* add others for h3,h4,p, strong, p */
+}
