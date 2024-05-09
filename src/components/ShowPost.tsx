@@ -1,5 +1,7 @@
+import parse from 'html-react-parser';
+
 const ShowPost = ({htmlContent}:{htmlContent: string})=>{
-   return <>{htmlContent}</>
+   return <>{parse(htmlContent)}</>
 }
 
 export default ShowPost;
