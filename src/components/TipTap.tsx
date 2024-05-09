@@ -25,8 +25,8 @@ const TipTap = ({handleHtmlSave}:Props)=>{
     }
 
     return (
-      <div>
-        <div>
+      <div className='m-8'>
+        <div className='w-full flex flex-wrap bg-gray-600 p-3 gap-3 text-white'>
             <button onClick={()=> editor.chain().focus().toggleBold().run()} disabled={!editor.can().chain().toggleBold().run()} 
             className={editor.isActive('bold') ? 'is-active':''}>
                 <strong>B</strong>
@@ -168,11 +168,11 @@ const TipTap = ({handleHtmlSave}:Props)=>{
 
         </div>
 
-        <div>
+        <div className='border border-gray-500 border-t-0 focus:outline-none'>
             <EditorContent editor={editor}/>
         </div>
 
-        <button onClick={handleEditorContent}>Save</button>
+        <button onClick={handleEditorContent} className='bg-green-400 px-2 py-1 rounded-md mt-5'>Save</button>
       </div>
     )
   }
